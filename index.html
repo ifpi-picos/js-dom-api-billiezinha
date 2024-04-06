@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="css/makeUp.css">
+    <title>Lista de Tarefas com Repositórios do GitHub</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <div class="titulo">
-    <h1>Lista de Tarefas</h1>
+    <h1>Lista de Tarefas com Repositórios do GitHub</h1>
   </div>
+  <div class="info">
+    <p id="userInfo"></p>
+    <p id="repoInfo"></p>
+</div>
     <input class="inputs" type="text" id="taskInput" placeholder="Adicionar nova tarefa">
     <input class="inputs" type="date" id="dateInput">
+    <input class="inputs" type="text" id="githubUserInput" placeholder="Nome de usuário do GitHub">
+    <select class="inputs" id="repoSelect"></select>
     <button class="inputs" onclick="adicionarTarefa()">Adicionar</button>
     <ul id="taskList"></ul>
 
-    <script src="js/scripts.js"></script>
+    <div class="fim">
+      <p>by billiezinha</p>
+      <h2>|</h2>
+      <p><a href="https://www.instagram.com/joaofernandessr/">Instagram</a></p>
+  </div>
+  
+
+    <script src="scripts.js"></script>
 </body>
 </html>

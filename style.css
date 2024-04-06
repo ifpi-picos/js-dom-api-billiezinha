@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(36, 156, 120);
+  text-align: center;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  color: rgb(105, 4, 105);
+}
+
+.inputs{
+  margin-top: 5px;
+  border-radius: 5px;
+  width: 70%;
+  height: 3em;
+}
+
+.concluida {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.fim {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(36, 156, 120);
+  color: black;
+  padding: 5px 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  height: 20px;
+}
+
+.fim a {
+  color: rgb(68, 1, 68);
+  text-decoration: none;
+}
+
+.fim p, .fim h2 {
+  margin: 0 10px;
+}
