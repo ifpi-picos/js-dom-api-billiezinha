@@ -25,24 +25,25 @@ window.onload = function() {
         document.getElementById('githubUserInput').value = savedUsername;
         loadRepos(savedUsername);
     }
-
+    
     const savedTasks = JSON.parse(localStorage.getItem('tarefas'));
     if (savedTasks) {
         const listaTarefas = document.getElementById("taskList");
         savedTasks.forEach(function(tarefa) {
             var itemTarefa = document.createElement("li");
+            
             itemTarefa.textContent = tarefa.texto + " - " + tarefa.data;
             itemTarefa.onclick = function() {
                 concluirTarefa(this);
             };
-
+            
             var removerBotao = document.createElement("button");
             removerBotao.innerHTML = '<i class="fas fa-trash"></i>';
             removerBotao.onclick = function(event) {
                 event.stopPropagation();
                 removerTarefa(this.parentNode);
             };
-
+            
             itemTarefa.appendChild(removerBotao);
             listaTarefas.appendChild(itemTarefa);
         });
@@ -58,27 +59,28 @@ function adicionarTarefa() {
     var input = document.getElementById("taskInput");
     var textoTarefa = input.value.trim();
     if (textoTarefa === "") return;
-
+    
     var dateInput = document.getElementById("dateInput");
     var dataTarefa = dateInput.value;
-
+    
     var listaTarefas = document.getElementById("taskList");
     var itemTarefa = document.createElement("li");
     itemTarefa.textContent = textoTarefa + " - " + dataTarefa;
     itemTarefa.onclick = function() {
         concluirTarefa(this);
     };
-
+    
     var removerBotao = document.createElement("button");
     removerBotao.innerHTML = '<i class="fas fa-trash"></i>';
     removerBotao.onclick = function(event) {
         event.stopPropagation();
         removerTarefa(this.parentNode);
     };
-
+    
+    
     itemTarefa.appendChild(removerBotao);
     listaTarefas.appendChild(itemTarefa);
-
+    
     var tarefa = {
         texto: textoTarefa,
         data: dataTarefa
@@ -86,7 +88,7 @@ function adicionarTarefa() {
     var tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
     tarefasSalvas.push(tarefa);
     localStorage.setItem('tarefas', JSON.stringify(tarefasSalvas));
-
+    
     input.value = "";
     dateInput.value = "";
 }
@@ -105,3 +107,4 @@ function removerTarefa(tarefaElement) {
     });
     localStorage.setItem('tarefas', JSON.stringify(tarefasSalvas));
 }
+

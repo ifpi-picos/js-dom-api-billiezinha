@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(36, 156, 120);
+  background-color: rgb(205, 169, 113);
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -10,7 +10,9 @@ body {
 .titulo {
   display: flex;
   justify-content: center;
-  color: rgb(105, 4, 105);
+  color: rgb(136, 34, 8);
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .inputs{
@@ -30,7 +32,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(36, 156, 120);
+  background-color: rgb(58, 118, 115);
   color: black;
   padding: 5px 0;
   font-size: 12px;
@@ -42,7 +44,7 @@ body {
 }
 
 .fim a {
-  color: rgb(68, 1, 68);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -51,7 +53,11 @@ body {
 }
 
 .teste {
-  background-color: aquamarine;
+  background-color: rgb(239, 206, 169);
   border-radius: 20px;
   box-shadow:10px 20px 25px rgba(0, 0, 0, 0.9);
+}
+
+li{
+  cursor: pointer;
 }
