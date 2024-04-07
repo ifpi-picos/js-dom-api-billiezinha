@@ -99,9 +99,9 @@ function removerTarefa(tarefaElement) {
     tarefaElement.remove();
 
     var tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
-    var textoTarefaRemovida = tarefaElement.textContent.split(" - ")[0]; // Extrair o texto da tarefa removida
+    var textoTarefaRemovida = tarefaElement.textContent.split(" - ")[0];
     tarefasSalvas = tarefasSalvas.filter(function(tarefa) {
-        return tarefa.texto !== textoTarefaRemovida; // Filtrar todas as tarefas, exceto a removida
+        return tarefa.texto !== textoTarefaRemovida;
     });
     localStorage.setItem('tarefas', JSON.stringify(tarefasSalvas));
 }

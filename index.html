@@ -6,28 +6,32 @@
     <title>Lista de Tarefas com Repositórios do GitHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="titulo">
-    <h1>Lista de Tarefas com Repositórios do GitHub</h1>
+  <div class="teste">
+    <div class="titulo">
+      <h1>Lista de Tarefas de Repositórios do GitHub</h1>
+    </div>
+    <div class="info">
+      <p id="userInfo"></p>
+      <p id="repoInfo"></p>
   </div>
-  <div class="info">
-    <p id="userInfo"></p>
-    <p id="repoInfo"></p>
-</div>
-    <input class="inputs" type="text" id="taskInput" placeholder="Adicionar nova tarefa">
-    <input class="inputs" type="date" id="dateInput">
-    <input class="inputs" type="text" id="githubUserInput" placeholder="Nome de usuário do GitHub">
-    <select class="inputs" id="repoSelect"></select>
-    <button class="inputs" onclick="adicionarTarefa()">Adicionar</button>
-    <ul id="taskList"></ul>
+      <input class="inputs" type="text" id="githubUserInput" placeholder="Nome de usuário do GitHub">
+      <input class="inputs" type="text" id="taskInput" placeholder="Adicionar nova tarefa">
+      <input class="inputs" type="date" id="dateInput">
+      <select class="inputs" id="repoSelect"></select>
+      <button class="inputs" onclick="adicionarTarefa()">Adicionar</button>
+      <ul id="taskList"></ul>
 
-    <div class="fim">
-      <p>by billiezinha</p>
-      <h2>|</h2>
-      <p><a href="https://www.instagram.com/joaofernandessr/">Instagram</a></p>
-  </div>
-  
+      <div class="fim">
+        <p>by billiezinha</p>
+        <h2>|</h2>
+        <p><a href="https://www.instagram.com/joaofernandessr/">Instagram</a></p>
+    </div>
+</div>
 
     <script src="scripts.js"></script>
 </body>

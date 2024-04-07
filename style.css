@@ -2,9 +2,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Courier New', Courier, monospace;
   background-color: rgb(36, 156, 120);
   text-align: center;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .titulo {
@@ -48,4 +48,10 @@ body {
 
 .fim p, .fim h2 {
   margin: 0 10px;
+}
+
+.teste {
+  background-color: aquamarine;
+  border-radius: 20px;
+  box-shadow:10px 20px 25px rgba(0, 0, 0, 0.9);
 }
