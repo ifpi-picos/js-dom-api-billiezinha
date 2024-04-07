@@ -11,9 +11,7 @@ async function loadRepos(username) {
             option.textContent = repo.name;
             repoSelect.appendChild(option);
         });
-        // Exibir o nome de usuário
         document.getElementById('userInfo').textContent = `Usuário do GitHub: ${username}`;
-        // Salvar o nome de usuário no localStorage
         localStorage.setItem('githubUsername', username);
     } catch (error) {
         console.error('Erro ao carregar repositórios:', error);
@@ -21,7 +19,6 @@ async function loadRepos(username) {
 }
 
 window.onload = function() {
-    // Carregar o nome de usuário do localStorage, se existir
     const savedUsername = localStorage.getItem('githubUsername');
     if (savedUsername) {
         document.getElementById('githubUserInput').value = savedUsername;
@@ -57,7 +54,6 @@ function adicionarTarefa() {
     itemTarefa.appendChild(removerBotao);
     listaTarefas.appendChild(itemTarefa);
 
-    // Salvar a tarefa no localStorage
     var tarefa = {
         texto: textoTarefa,
         data: dataTarefa
@@ -71,14 +67,12 @@ function adicionarTarefa() {
 }
 
 window.onload = function() {
-    // Carregar o nome de usuário do localStorage, se existir
     const savedUsername = localStorage.getItem('githubUsername');
     if (savedUsername) {
         document.getElementById('githubUserInput').value = savedUsername;
         loadRepos(savedUsername);
     }
 
-    // Carregar as tarefas salvas do localStorage
     const savedTasks = JSON.parse(localStorage.getItem('tarefas'));
     if (savedTasks) {
         const listaTarefas = document.getElementById("taskList");
@@ -104,12 +98,10 @@ window.onload = function() {
 
 repoSelect.addEventListener('change', function() {
     const selectedRepo = this.value;
-    // Exibir o repositório selecionado
     document.getElementById('repoInfo').textContent = `Repositório selecionado: ${selectedRepo}`;
 });
 
 
-// Função para carregar os repositórios quando o nome de usuário é inserido
 document.getElementById("githubUserInput").addEventListener("change", function() {
     var username = this.value.trim();
     loadRepos(username);
@@ -118,7 +110,6 @@ document.getElementById("githubUserInput").addEventListener("change", function()
 function removerTarefa(tarefaElement) {
     tarefaElement.remove();
 
-    // Atualizar o localStorage removendo a tarefa removida da lista de tarefas
     var tarefasSalvas = JSON.parse(localStorage.getItem('tarefas')) || [];
     var textoTarefaRemovida = tarefaElement.textContent.split(" - ")[0]; // Extrair o texto da tarefa removida
     tarefasSalvas = tarefasSalvas.filter(function(tarefa) {
@@ -128,14 +119,12 @@ function removerTarefa(tarefaElement) {
 }
 
 window.onload = function() {
-    // Carregar o nome de usuário do localStorage, se existir
     const savedUsername = localStorage.getItem('githubUsername');
     if (savedUsername) {
         document.getElementById('githubUserInput').value = savedUsername;
         loadRepos(savedUsername);
     }
 
-    // Carregar as tarefas salvas do localStorage
     const savedTasks = JSON.parse(localStorage.getItem('tarefas'));
     if (savedTasks) {
         const listaTarefas = document.getElementById("taskList");
